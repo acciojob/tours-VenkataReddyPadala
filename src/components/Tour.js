@@ -20,7 +20,7 @@ function Tour({ id, image, info, price, name, removeTour }) {
             id={`see-more-${id}`}
             onClick={() => setShowMore((prev) => !prev)}
           >
-            {showMore ? "See less" : "See more"}
+            {showMore ? "Show less" : "See more"}
           </button>
         </p>
 
