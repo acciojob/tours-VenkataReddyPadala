@@ -33,7 +33,7 @@ function App() {
 
   if (loading) {
     return (
-      <main>
+      <main id="main">
         <Loading />
       </main>
     );
@@ -41,7 +41,7 @@ function App() {
 
   if (tours.length === 0) {
     return (
-      <main className="no-tours">
+      <main id="main" className="no-tours">
         <h2>No tours left</h2>
         <button className="btn-refresh" onClick={fetchTours}>
           Refresh
@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <main>
+    <main id="main">
       <Tours tours={tours} removeTour={removeTour} />
     </main>
   );
