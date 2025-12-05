@@ -16,12 +16,14 @@ function Tour({ id, image, info, price, name, removeTour }) {
 
         <p id={`tour-item-para-${id}`}>
           {text}
-          <button onClick={() => setShowMore((prev) => !prev)}>
-            {showMore ? "See less" : "Show more"}
+          <button
+            id={`see-more-${id}`}
+            onClick={() => setShowMore((prev) => !prev)}
+          >
+            {showMore ? "See less" : "See more"}
           </button>
         </p>
 
-        {/* Cypress expects this exact ID pattern */}
         <button
           id={`delete-btn-${id}`}
           className="btn-remove"
